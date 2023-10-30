@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <link rel="stylesheet" href="index.html">
+    <title>Hospital Appointment Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecebf0;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('https://www.rideaufht.ca/wp-content/uploads/2016/07/AdobeStock_92345619.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .section p {
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .cont {
+            margin-right: 350px;
+            background-color: rgb(156, 213, 236);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            width: 390px;
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        h1 {
+            color: #121010;
+        }
+
+        label,
+        select {
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea,
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #000000;
+            color: #f8f3f3;
+            cursor: pointer;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .lunch{
+            border: 1px solid black;
+            margin-top: 90px;
+            margin-bottom: 50px;
+            padding: 40px;
+            background-color: aliceblue;
+        }
+        .break{
+            border: 1px solid black;
+            margin-bottom: 80px;
+            padding: 40px; background-color: aliceblue;
+        }
+        /*  .image img{margin-left: 40px;} */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="section">
+        <div class="image">
+            <img src = "https://tse3.mm.bing.net/th?id=OIP.CO5TnHKC3-KLATlby91TowHaGL&pid=Api&P=0&h=180" alt="working hours">
+        </div>
+        <div class="lunch">
+            <h3>working hours</h3>
+            <p>9.00 a.m - 10.00 p.m</p><br><br>
+        </div>
+        <div class="break">
+            <h3>break</h3>
+            <p>1.00 p.m - 2.00 p.m</p>
+        </div>
+
+    </div>
+        <div class="cont">
+            <form action="payment.html">
+                <h1>Appointment Now</h1>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <label for="best-time">Best Time to Call You:</label>
+                <select id="best-time" name="best-time">
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                </select>
+                <label for="appointment-type">I would like to choose:</label>
+                <select id="appointment-type" name="appointment-type">
+                    <option value="new-patient">A New Patient Appointment</option>
+                    <option value="routine-checkup">A Routine Checkup</option>
+                    <option value="comprehensive-exam">A Comprehensive Health Exam</option>
+                </select>
+
+                <a href="payment.html"><input type="submit" value="Appoint Now"></a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
